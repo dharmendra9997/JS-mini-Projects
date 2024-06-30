@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet" />
+    <title>Sticky NavBar</title>
+</head>
+
+<body>
+    <div class="image">
+        <h1>A story about ocean of Nector.</h1>
+    </div>
+    <nav>
+        <ul>
+            <li class="logo"><a href="#">Logo</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Honours</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea tempora impedit accusamus quo repudiandae
+            deleniti corporis, illo reiciendis, praesentium asperiores soluta debitis pariatur facere! Voluptatibus
+            voluptas, deserunt unde praesentium odit asperiores. Consectetur sequi aut corrupti eius eos nam dignissimos
+            commodi minus quam veritatis reprehenderit laboriosam, beatae totam amet ab, quis quia ratione quidem
+            suscipit et doloremque, voluptatum tenetur incidunt earum. Voluptatibus dolore modi adipisci magni. Corrupti
+            reiciendis enim dicta consectetur? Amet cumque vero recusandae, at ipsam, ratione molestiae sequi nisi
+            corrupti temporibus commodi earum expedita aut modi! Reiciendis, necessitatibus illo sint voluptates ipsa
+            dicta, distinctio saepe, itaque repudiandae eum iure consequuntur? Voluptates eaque aut necessitatibus iure
+            veritatis repellendus, reiciendis asperiores quod possimus provident quaerat, tenetur, ad doloribus facere
+            beatae esse architecto veniam consequuntur eius cupiditate quasi harum! Eos cupiditate corporis pariatur
+            aspernatur in vero provident aut modi! Maxime dicta unde dolore possimus, eum, suscipit at enim voluptatum
+            accusantium repudiandae amet reiciendis aliquam accusamus ut voluptatibus praesentium inventore ratione?
+            Expedita veniam aliquam vel ipsa sunt illum quam explicabo consequuntur ipsum? Voluptas, a? Et deleniti
+            porro facere cupiditate deserunt ipsam. Corrupti saepe velit error vel? Amet numquam nobis sunt sapiente
+            tempore ea rerum consectetur ex ipsa quo, consequatur veniam minima nemo enim voluptatibus incidunt quos
+            cupiditate vel! Nihil quidem, cumque hic molestiae unde doloremque mollitia autem laborum vero blanditiis
+            deserunt porro, maiores quod fuga. Quaerat vero esse aperiam necessitatibus, suscipit beatae expedita ex
+            deleniti velit autem? Vitae repellendus cum mollitia voluptatum nisi enim aut eaque odit! Impedit similique
+            qui adipisci officiis perferendis quidem, debitis numquam natus quas dignissimos atque accusantium cum
+            veritatis facilis maxime, esse odit porro. At nisi omnis hic commodi alias nostrum mollitia, voluptate fugit
+            dolores fuga vitae? Expedita vero non voluptatum beatae saepe. Quidem a nisi earum explicabo adipisci sed,
+            atque, repudiandae facilis suscipit nulla nobis doloribus saepe obcaecati laudantium fugiat error, dolore
+            officia vero! Cum iusto repudiandae numquam fugiat, inventore labore cumque, enim tempora at veritatis
+            similique tempore rerum error distinctio. Numquam, saepe repellat. Repudiandae adipisci maxime nemo iure
+            optio temporibus esse voluptatem dolor delectus modi itaque facere cumque ut quisquam sit, eaque tenetur
+            inventore, aut dolorem quam tempore illo veritatis iste voluptate! Vitae voluptates pariatur aliquid aperiam
+            et eius asperiores quaerat repellendus sed dolorum laborum iusto laboriosam adipisci, ipsam minus alias
+            illum culpa voluptatibus hic. Accusantium libero, blanditiis itaque rem fuga magnam eum quas sed. A, quod
+            officiis, cumque accusantium velit non sint provident est eos distinctio odio corrupti fugiat
+            exercitationem, possimus sit soluta id reiciendis? Architecto animi iste cumque nisi eveniet quasi nemo
+            temporibus ea esse minus facilis sunt culpa, sit dolorum similique vel nam non eaque inventore corrupti
+            perspiciatis eius ratione facere! Laborum ratione fugit placeat illum numquam aliquid tempora repudiandae
+            molestias, rerum nemo ipsum voluptates vero maxime beatae commodi, harum nisi rem corporis in officiis at
+            itaque corrupti dignissimos. Maxime ipsum inventore minus nostrum non optio tempora, dolorum dolorem
+            eligendi. Cum nisi beatae recusandae veniam nobis consectetur alias dolores aut in. Porro odit reprehenderit
+            ab similique sed natus nulla repellat maxime, ex reiciendis ipsum.
+        </p>
+    </div>
+
+    <script>
+        let nav = document.querySelector('nav');
+        let offsetTop = nav.offsetTop;
+
+        function fixPosition(eventObj) {
+            console.log(window.scrollY, offsetTop);
+            if (window.scrollY >= offsetTop) {
+                document.body.classList.add('fixed');
+                document.body.style.paddingTop = nav.offsetHeight + 'px';
+            } else {
+                document.body.classList.remove('fixed');
+                document.body.style.paddingTop = 0 + 'px';
+            }
+        }
+        window.addEventListener('scroll', fixPosition);
+    </script>
+</body>
+
+</html>
